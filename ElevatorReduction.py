@@ -54,8 +54,9 @@ def prompt():
     print("Use stairs or die")
 
 def buzzer():
+    init()
     cycles = 0
-    while (cycles < 3):
+    while (cycles < 5):
         GPIO.output(26,GPIO.LOW)
         time.sleep(0.05)
         GPIO.output(26,GPIO.HIGH)
@@ -82,5 +83,3 @@ def sensor():
         print("Measurement stopped by User")
         GPIO.cleanup()
 
-        
-# sensor()
