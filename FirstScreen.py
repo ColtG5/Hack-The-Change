@@ -5,8 +5,7 @@ first_text = "Hello There!"
 light_blue = "#00DEFF"
 background_image = tk.PhotoImage(file="xp-hills.jpg")
 
-def displayTheScreen():
-    window = tk.Tk()
+def displayScreenOne(window):
     
     main_frame = tk.Frame(window, bg=light_blue, height=1080, width=1920)
     main_frame.pack(fill="both", expand="true")
@@ -16,5 +15,3 @@ def displayTheScreen():
     label_image.pack()
 
     # first_text = tk.Label(root, text=first_text, font="")
-
-    window.mainloop()
