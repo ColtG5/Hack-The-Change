@@ -13,7 +13,7 @@ class ElevatorReductionWindows(tk.Tk):
         # the container is where we'll stack a bunch of frames
         # on top of each other, then the one we want visible
         # will be raised above the others
-        container = tk.Frame(self)
+        container = tk.Frame(self, height=1080, width=1000)
         container.pack(side="top", fill="both", expand=True)
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
@@ -40,15 +40,15 @@ class ElevatorReductionWindows(tk.Tk):
 class FirstWindow(tk.Frame):
 
     def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
+        tk.Frame.__init__(self, parent, width=1000, height=1000)
         self.controller = controller
         # label = tk.Label(self, text="This is the first page", font=controller.title_font)
         # label.pack(side="top", fill="x", pady=10)
 
-        bg_image = ImageTk.PhotoImage(Image.open("/home/pi/Documents/Coding Projects/Hack-The-Change/xp-hills.png"))
+        # bg_image = ImageTk.PhotoImage(Image.open("/home/pi/Documents/Coding Projects/Hack-The-Change/xp-hills.png"))
 
-        background = tk.Label(self, i=bg_image)
-        background.pack()
+        # background = tk.Label(self, i=bg_image)
+        # background.pack(side="top", fill="x", pady=0)
 
         button = tk.Button(self, text="Go to the second page",
                             command=lambda: controller.show_frame("SecondWindow"))
@@ -75,7 +75,7 @@ class ThirdWindow(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="This is page 2", font=controller.title_font)
+        label = tk.Label(self, text="This is the third page", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
         # button = tk.Button(self, text="Go to the start page",
         #                    command=lambda: controller.show_frame("StartPage"))

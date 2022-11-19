@@ -2,8 +2,7 @@ import tkinter as tk
 import time
 import ElevatorReduction
 from ElevatorReductionWindows import *
-from FirstScreen import *
-
+from Screens import *
 
 def checkForMotion():
     ElevatorReduction.sensor()
@@ -13,15 +12,16 @@ def onWake():
     print("sensor detected motion! Wake the screen!")
 
 def displayScreens():
-    # window = tk.Tk()
+    
+
+    displayTheScreens()
+
+    time.sleep(1.5)
 
 
-    # displayScreenOne(window)
 
-
-    # window.mainloop()
-    elevator_reduction = ElevatorReductionWindows()
-    elevator_reduction.mainloop()
+    # elevator_reduction = ElevatorReductionWindows()
+    # elevator_reduction.mainloop()
     
 
 def main():
