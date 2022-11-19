@@ -7,7 +7,7 @@ light_blue = "00DEFF"
 def displayTheScreen():
     root = tk.Tk()
     
-    main_frame = tk.Frame(root, bg="blue", height=1080, width=1920)
+    main_frame = tk.Frame(root, bg="black", height=1080, width=1920)
     main_frame.pack(fill="both", expand="true")
 
     root.geometry("1920x1080")
