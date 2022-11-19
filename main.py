@@ -1,6 +1,7 @@
 import tkinter as tk
 import time
 import ElevatorReduction
+from Display import *
 
 
 def checkForMotion():
@@ -9,13 +10,7 @@ def checkForMotion():
 
 def onWake():
     print("sensor detected motion! Wake the screen!")
-
-def displayTheScreen():
-    root = tk.Tk()
-
-
-
-    root.mainloop()
+    
 
 def main():
 
