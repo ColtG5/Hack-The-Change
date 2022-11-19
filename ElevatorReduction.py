@@ -83,4 +83,4 @@ def sensor():
         GPIO.cleanup()
 
         
-sensor()
+# sensor()
