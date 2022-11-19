@@ -13,10 +13,19 @@ GPIO.setup(GPIO_ECHO, GPIO.IN)
 
 
 def init():
-         GPIO.setwarnings(False)
-         GPIO.setmode(GPIO.BCM)
-         GPIO.setup(26,GPIO.OUT)
-         pass
+        GPIO.setmode(GPIO.BCM)
+
+        GPIO_TRIGGER = 18
+        GPIO_ECHO = 24
+
+        GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
+        GPIO.setup(GPIO_ECHO, GPIO.IN)
+
+
+        GPIO.setwarnings(False)
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(26,GPIO.OUT)
+        pass
 
 def distance():
     
@@ -54,26 +63,24 @@ def buzzer():
         GPIO.output(26,GPIO.HIGH)
         cycles += 1
 
-def main():
+def sensor():
 
     init()
-    
+
     try:
         while True:
             dist = distance()
-            sleep_time = 0.2
+            sleep_time = 0.1
             time.sleep(sleep_time)
             prev_dist = 0
             if ((dist < 100) and (prev_dist < 100)):
-                buzzer()
-                prompt()
+                GPIO.cleanup()
+                return
             prev_dist = dist
 
     except KeyboardInterrupt:
         print("Measurement stopped by User")
         GPIO.cleanup()
 
-if __name__ == '__main__':
-    main()
-
         
+sensor()

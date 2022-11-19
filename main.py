@@ -4,9 +4,8 @@ import ElevatorReduction
 
 
 def checkForMotion():
-    print("checking for motion")
-    ElevatorReduction.main()
-    return True
+    ElevatorReduction.sensor()
+    return
 
 def onWake():
     print("sensor detected motion! Wake the screen!")
@@ -21,6 +20,7 @@ def displayTheScreen():
 def main():
 
     # Continous loop to wait for motion to be detected
+    print("checking for motion")
     checkForMotion()
     # Once we have motion, go into initial procedure to wake up the screen
     onWake()
