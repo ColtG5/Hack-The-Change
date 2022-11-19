@@ -12,11 +12,13 @@ def displayTheScreen():
     # main_frame.pack(fill="both", expand="true")
     # window.geometry("1920x1080")
 
-    print("")
     background_image = ImageTk.PhotoImage(Image.open("/home/pi/Documents/Coding Projects/Hack-The-Change/xp-hills.png"))
 
-    label_image = tk.Label(window, i=background_image)
-    label_image.pack()
+    bg_image = tk.Label(window, i=background_image)
+    bg_image.pack()
+
+    welcome_text = tk.Label(window, text="Hey You!", font="Courier", height=100, width=200, bg="black", fg="white")
+    welcome_text.place(x=0, y=0)
 
     # first_text = tk.Label(root, text=first_text, font="")
 
