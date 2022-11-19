@@ -1,10 +1,11 @@
 import tkinter as tk
 import time
-
+import ElevatorReduction
 
 
 def checkForMotion():
     print("checking for motion")
+    ElevatorReduction.main()
     return True
 
 def onWake():
