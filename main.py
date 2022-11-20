@@ -2,6 +2,7 @@ import tkinter as tk
 import time
 import ElevatorReduction
 from ElevatorReductionWindows import *
+from FrameSwitcher import *
 from Screens import *
 
 def checkForMotion():
@@ -15,8 +16,11 @@ def displayScreens():
 
     # displayTheScreens()
 
-    elevator_reduction = ElevatorReductionWindows()
-    elevator_reduction.mainloop()
+    frame_switcher = FrameSwitcher()
+    frame_switcher.mainloop()
+
+    # elevator_reduction = ElevatorReductionWindows()
+    # elevator_reduction.mainloop()
     
 
 def main():
