@@ -12,16 +12,11 @@ def onWake():
     print("sensor detected motion! Wake the screen!")
 
 def displayScreens():
-    
 
-    displayTheScreens()
+    # displayTheScreens()
 
-    time.sleep(1.5)
-
-
-
-    # elevator_reduction = ElevatorReductionWindows()
-    # elevator_reduction.mainloop()
+    elevator_reduction = ElevatorReductionWindows()
+    elevator_reduction.mainloop()
     
 
 def main():
@@ -33,7 +28,12 @@ def main():
     onWake()
 
     #Create the UI to display for the user
+
     displayScreens()
+
+    # displayWindowOne()
+
+    # displayWindowTwo()
     
 
 if __name__ == '__main__':
