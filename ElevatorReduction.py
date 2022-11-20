@@ -12,7 +12,6 @@ DISTANCE_FOR_SENSOR_ACTIVATION = 325
 GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
 
-
 def init():
         GPIO.setmode(GPIO.BCM)
 
@@ -50,27 +49,11 @@ def distance():
     
     return distance
 
-
-def prompt():
-    print("Use stairs or die")
-
-def buzzer():
-    init()
-    cycles = 0
-    while (cycles < 5):
-        GPIO.output(26,GPIO.LOW)
-        time.sleep(0.05)
-        GPIO.output(26,GPIO.HIGH)
-        time.sleep(0.05)
-        GPIO.output(26,GPIO.HIGH)
-        cycles += 1
-
 def sensor():
 
     init()
 
     prev_dist = 0
-
     try:
         while True:
             dist = distance()
@@ -81,9 +64,6 @@ def sensor():
                 GPIO.cleanup()
                 return
             prev_dist = dist
-            # if (dist < DISTANCE_FOR_SENSOR_ACTIVATION):
-            #     GPIO.cleanup()
-            #     return
 
     except KeyboardInterrupt:
         print("Measurement stopped by User")
