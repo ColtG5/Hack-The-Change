@@ -77,13 +77,13 @@ def sensor():
             print(dist)
             sleep_time = 0.1
             time.sleep(sleep_time)
-            # if ((dist < DISTANCE_FOR_SENSOR_ACTIVATION) and (prev_dist < DISTANCE_FOR_SENSOR_ACTIVATION)):
-            #     GPIO.cleanup()
-            #     return
-            # prev_dist = dist
-            if (dist < DISTANCE_FOR_SENSOR_ACTIVATION):
+            if ((dist < DISTANCE_FOR_SENSOR_ACTIVATION) and (prev_dist < DISTANCE_FOR_SENSOR_ACTIVATION)):
                 GPIO.cleanup()
                 return
+            prev_dist = dist
+            # if (dist < DISTANCE_FOR_SENSOR_ACTIVATION):
+            #     GPIO.cleanup()
+            #     return
 
     except KeyboardInterrupt:
         print("Measurement stopped by User")
