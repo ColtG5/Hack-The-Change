@@ -71,9 +71,9 @@ def sensor():
     try:
         while True:
             dist = distance()
+            print(dist)
             sleep_time = 0.1
             time.sleep(sleep_time)
-            prev_dist = 0
             if ((dist < 100) and (prev_dist < 100)):
                 GPIO.cleanup()
                 return

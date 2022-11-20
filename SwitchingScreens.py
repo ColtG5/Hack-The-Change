@@ -11,6 +11,7 @@ def displayAndSwitchWindows(window):
     
     window.geometry("1920x1080")
     window.resizable(0,0)
+    window.attributes("-fullscreen", True)
     
     main_frame = tk.Frame(window, height=1080, width=1920, bg="black")
     main_frame.pack(fill="both", expand="true")
