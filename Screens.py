@@ -29,13 +29,10 @@ def displayWindowOne():
     # background = tk.Label(main_frame, i=bg_image)
     # background.pack()
 
-    print("beforeloop")
-    window.mainloop()
-    print("afterloop")
     time.sleep(1)
     print("aftersleep")
-    window.withdraw()
     print("after withdraw")
+    window.quit()
 
 
 def displayWindowTwo():

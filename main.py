@@ -14,10 +14,12 @@ def onWake():
 
 def displayScreens():
 
-    # displayTheScreens()
+    displayWindowOne()
+    
+    displayWindowTwo()
 
-    frame_switcher = FrameSwitcher()
-    frame_switcher.mainloop()
+    # frame_switcher = FrameSwitcher()
+    # frame_switcher.mainloop()
 
     # elevator_reduction = ElevatorReductionWindows()
     # elevator_reduction.mainloop()
