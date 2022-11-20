@@ -19,6 +19,7 @@ def displayWindowOne():
     background = tk.Label(main_frame, i=bg_image)
     # print("displaying image")
     background.pack()
+    window.update()
     # print("boutta sleep")
     # print("woke up")
 
@@ -28,8 +29,8 @@ def displayWindowOne():
     # bg_image = ImageTk.PhotoImage(Image.open("man-waving.png"))
     # background = tk.Label(main_frame, i=bg_image)
     # background.pack()
-
-    time.sleep(1)
+    print("beforesleep")
+    time.sleep(2)
     print("aftersleep")
     print("after withdraw")
     window.quit()

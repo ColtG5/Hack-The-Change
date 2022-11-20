@@ -16,7 +16,7 @@ def displayScreens():
 
     displayWindowOne()
     
-    displayWindowTwo()
+    # displayWindowTwo()
 
     # frame_switcher = FrameSwitcher()
     # frame_switcher.mainloop()
