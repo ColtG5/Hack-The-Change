@@ -1,12 +1,13 @@
 import RPi.GPIO as GPIO
 import time
 
-
-
 GPIO.setmode(GPIO.BCM)
 
 GPIO_TRIGGER = 18
 GPIO_ECHO = 24
+
+# distance is in cm
+DISTANCE_FOR_SENSOR_ACTIVATION = 165
 
 GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
@@ -74,7 +75,7 @@ def sensor():
             # print(dist)
             sleep_time = 0.1
             time.sleep(sleep_time)
-            if ((dist < 100) and (prev_dist < 100)):
+            if ((dist < DISTANCE_FOR_SENSOR_ACTIVATION) and (prev_dist < DISTANCE_FOR_SENSOR_ACTIVATION)):
                 GPIO.cleanup()
                 return
             prev_dist = dist

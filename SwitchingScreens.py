@@ -3,9 +3,9 @@ from PIL import ImageTk, Image
 import time
 import ElevatorReduction
 
-TIMING_ONE = 3
-TIMING_TWO = 6.5
-TIMING_THREE = 6.5
+TIMING_INTRO = 3
+TIMING_PIC1 = 8.5
+TIMING_PIC2 = 9
 
 continue_program = True
 
@@ -48,17 +48,17 @@ def displayAndSwitchWindows(window):
         background2.pack()
         window.update()
 
-        time.sleep(TIMING_ONE)
+        time.sleep(TIMING_INTRO)
 
         intro.destroy()
         window.update()
 
-        time.sleep(TIMING_TWO)
+        time.sleep(TIMING_PIC1)
 
         background1.destroy()
         window.update()
 
-        time.sleep(TIMING_THREE)
+        time.sleep(TIMING_PIC2)
 
         background2.destroy()
         window.update()
