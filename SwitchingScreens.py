@@ -3,8 +3,11 @@ from PIL import ImageTk, Image
 import time
 import ElevatorReduction
 
-first_text = "Hello There!"
-light_blue = "#00DEFF"
+TIMING_ONE = 3
+TIMING_TWO = 6.5
+TIMING_THREE = 6.5
+
+continue_program = True
 
 def displayAndSwitchWindows(window):
     print("testing commit")
@@ -21,7 +24,7 @@ def displayAndSwitchWindows(window):
     # main_frame.pack(side=tk.TOP)
     # main_frame.place(anchor='center', relx=0.5, rely=0.5)
 
-    while True:
+    while continue_program:
 
         # blank = tk.Label(main_frame, bg="black")
 
@@ -31,13 +34,13 @@ def displayAndSwitchWindows(window):
         # # Once we have motion, go into initial procedure to wake up the screen
         # onWake()
 
-        intro_image = ImageTk.PhotoImage(Image.open("xp-hills.png"))
+        intro_image = ImageTk.PhotoImage(Image.open("1.png"))
         intro = tk.Label(main_frame, i=intro_image)
 
-        bg_image1 = ImageTk.PhotoImage(Image.open("ABLE TO TAKE THE STAIRS (3).png"))
+        bg_image1 = ImageTk.PhotoImage(Image.open("2.png"))
         background1 = tk.Label(main_frame, i=bg_image1)
 
-        bg_image2 = ImageTk.PhotoImage(Image.open("Able to take the stairs (4).png"))
+        bg_image2 = ImageTk.PhotoImage(Image.open("3.png"))
         background2 = tk.Label(main_frame, i=bg_image2)
 
         intro.pack()
@@ -45,31 +48,34 @@ def displayAndSwitchWindows(window):
         background2.pack()
         window.update()
 
-        time.sleep(2)
+        time.sleep(TIMING_ONE)
 
         intro.destroy()
         window.update()
 
-        time.sleep(3.5)
+        time.sleep(TIMING_TWO)
 
         background1.destroy()
         window.update()
 
-        time.sleep(3)
+        time.sleep(TIMING_THREE)
 
         background2.destroy()
         window.update()
 
-        # window.quit()
+    # window.update()
+    # window.quit()
+    # window.upadte()
 
 def keyPressed(event, window):
-    print(event)
-    print(window)
-    window.update()
+    # print(event)
+    # print(window)
+    # window.update()
+
     window.destroy()
     window.update()
 
-
+    # continue_program = False
 
 # def displayWindowTwo():
 #     window = tk.Tk()
