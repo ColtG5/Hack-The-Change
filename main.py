@@ -29,7 +29,6 @@ def main():
 
     window = tk.Tk()
 
-    
     # Continous loop to wait for motion to be detected
     print("checking for motion")
     checkForMotion()
@@ -38,7 +37,7 @@ def main():
 
     #Create the UI to display for the user
 
-    displayWindows(window) 
+    displayAndSwitchWindows(window) 
 
     # displayWindowOne()
 

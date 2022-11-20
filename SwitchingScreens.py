@@ -1,11 +1,13 @@
 import tkinter as tk
 from PIL import ImageTk, Image
 import time
+import ElevatorReduction
 
 first_text = "Hello There!"
 light_blue = "#00DEFF"
 
-def displayWindows(window):
+def displayAndSwitchWindows(window):
+
     
     window.geometry("1920x1080")
     window.resizable(0,0)
@@ -14,40 +16,47 @@ def displayWindows(window):
     main_frame.pack(fill="both", expand="true")
     # main_frame.pack(side=tk.TOP)
     # main_frame.place(anchor='center', relx=0.5, rely=0.5)
-    print("making images")
 
-    # blank = tk.Label(main_frame, bg="black")
+    while True:
 
-    intro_image = ImageTk.PhotoImage(Image.open("xp-hills.png"))
-    intro = tk.Label(main_frame, i=intro_image)
+        # blank = tk.Label(main_frame, bg="black")
 
-    bg_image1 = ImageTk.PhotoImage(Image.open("ABLE TO TAKE THE STAIRS (3).png"))
-    background1 = tk.Label(main_frame, i=bg_image1)
+        # Continous loop to wait for motion to be detected
+        print("checking for motion")
+        ElevatorReduction.sensor()
+        # # Once we have motion, go into initial procedure to wake up the screen
+        # onWake()
 
-    bg_image2 = ImageTk.PhotoImage(Image.open("Able to take the stairs (4).png"))
-    background2 = tk.Label(main_frame, i=bg_image2)
+        intro_image = ImageTk.PhotoImage(Image.open("xp-hills.png"))
+        intro = tk.Label(main_frame, i=intro_image)
 
-    intro.pack()
-    background1.pack()
-    background2.pack()
-    window.update()
+        bg_image1 = ImageTk.PhotoImage(Image.open("ABLE TO TAKE THE STAIRS (3).png"))
+        background1 = tk.Label(main_frame, i=bg_image1)
 
-    time.sleep(2)
+        bg_image2 = ImageTk.PhotoImage(Image.open("Able to take the stairs (4).png"))
+        background2 = tk.Label(main_frame, i=bg_image2)
 
-    intro.destroy()
-    window.update()
+        intro.pack()
+        background1.pack()
+        background2.pack()
+        window.update()
 
-    time.sleep(3.5)
+        time.sleep(2)
 
-    background1.destroy()
-    window.update()
+        intro.destroy()
+        window.update()
 
-    time.sleep(3)
+        time.sleep(3.5)
 
-    background2.destroy()
-    window.update()
+        background1.destroy()
+        window.update()
 
-    window.quit()
+        time.sleep(3)
+
+        background2.destroy()
+        window.update()
+
+        # window.quit()
 
 
 # def displayWindowTwo():
