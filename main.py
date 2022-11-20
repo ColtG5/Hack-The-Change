@@ -14,8 +14,8 @@ def onWake():
 
 def displayScreens():
 
-    displayWindowOne()
-    
+    displayWindows()
+
     # displayWindowTwo()
 
     # frame_switcher = FrameSwitcher()
