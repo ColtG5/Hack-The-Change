@@ -3,7 +3,7 @@ import time
 import ElevatorReduction
 from ElevatorReductionWindows import *
 from FrameSwitcher import *
-from Screens import *
+from SwitchingScreens import *
 
 def checkForMotion():
     ElevatorReduction.sensor()
@@ -12,21 +12,22 @@ def checkForMotion():
 def onWake():
     print("sensor detected motion! Wake the screen!")
 
-def displayScreens():
+# def displayScreens():
 
-    displayWindows()
+#     displayWindows()
 
-    # displayWindowTwo()
+#     # displayWindowTwo()
 
-    # frame_switcher = FrameSwitcher()
-    # frame_switcher.mainloop()
+#     # frame_switcher = FrameSwitcher()
+#     # frame_switcher.mainloop()
 
-    # elevator_reduction = ElevatorReductionWindows()
-    # elevator_reduction.mainloop()
+#     # elevator_reduction = ElevatorReductionWindows()
+#     # elevator_reduction.mainloop()
     
 
 def main():
 
+    
     # Continous loop to wait for motion to be detected
     print("checking for motion")
     checkForMotion()
@@ -35,7 +36,7 @@ def main():
 
     #Create the UI to display for the user
 
-    displayScreens()
+    displayWindows()
 
     # displayWindowOne()
 

@@ -16,6 +16,8 @@ def displayWindows():
     # main_frame.place(anchor='center', relx=0.5, rely=0.5)
     print("making images")
 
+    # blank = tk.Label(main_frame, bg="black")
+
     intro_image = ImageTk.PhotoImage(Image.open("xp-hills.png"))
     intro = tk.Label(main_frame, i=intro_image)
 
@@ -42,23 +44,26 @@ def displayWindows():
 
     time.sleep(3)
 
+    background2.destroy()
+    window.update()
+
     window.quit()
 
 
-def displayWindowTwo():
-    window = tk.Tk()
-    window.geometry("1920x1080")
-    window.resizable(0,0)
+# def displayWindowTwo():
+#     window = tk.Tk()
+#     window.geometry("1920x1080")
+#     window.resizable(0,0)
     
-    main_frame = tk.Frame(window, height=1080, width=1920, bg="black")
-    main_frame.pack(fill="both", expand="true")
-    # main_frame.pack(side=tk.TOP)
-    # main_frame.place(anchor='center', relx=0.5, rely=0.5)
+#     main_frame = tk.Frame(window, height=1080, width=1920, bg="black")
+#     main_frame.pack(fill="both", expand="true")
+#     # main_frame.pack(side=tk.TOP)
+#     # main_frame.place(anchor='center', relx=0.5, rely=0.5)
 
-    bg_image = ImageTk.PhotoImage(Image.open("man-waving.png"))
-    background = tk.Label(main_frame, i=bg_image)
-    background.pack()
+#     bg_image = ImageTk.PhotoImage(Image.open("man-waving.png"))
+#     background = tk.Label(main_frame, i=bg_image)
+#     background.pack()
 
-    window.mainloop()
-    time.sleep(1.5)
-    window.withdraw()
+#     window.mainloop()
+#     time.sleep(1.5)
+#     window.withdraw()
