@@ -27,6 +27,8 @@ def onWake():
 
 def main():
 
+    window = tk.Tk()
+
     
     # Continous loop to wait for motion to be detected
     print("checking for motion")
@@ -36,7 +38,7 @@ def main():
 
     #Create the UI to display for the user
 
-    displayWindows()
+    displayWindows(window) 
 
     # displayWindowOne()
 

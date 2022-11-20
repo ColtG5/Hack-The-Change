@@ -5,8 +5,8 @@ import time
 first_text = "Hello There!"
 light_blue = "#00DEFF"
 
-def displayWindows():
-    window = tk.Tk()
+def displayWindows(window):
+    
     window.geometry("1920x1080")
     window.resizable(0,0)
     
@@ -32,7 +32,7 @@ def displayWindows():
     background2.pack()
     window.update()
 
-    time.sleep(1.2)
+    time.sleep(2)
 
     intro.destroy()
     window.update()
