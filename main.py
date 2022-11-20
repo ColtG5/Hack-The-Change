@@ -35,7 +35,7 @@ def main():
     # # Once we have motion, go into initial procedure to wake up the screen
     # onWake()
 
-    #Create the UI to display for the user
+    #Create the UI to display for the userd
 
     displayAndSwitchWindows(window) 
 

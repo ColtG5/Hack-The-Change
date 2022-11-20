@@ -7,7 +7,7 @@ GPIO_TRIGGER = 18
 GPIO_ECHO = 24
 
 # distance is in cm
-DISTANCE_FOR_SENSOR_ACTIVATION = 165
+DISTANCE_FOR_SENSOR_ACTIVATION = 325
 
 GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
@@ -69,16 +69,21 @@ def sensor():
 
     init()
 
+    prev_dist = 0
+
     try:
         while True:
             dist = distance()
-            # print(dist)
+            print(dist)
             sleep_time = 0.1
             time.sleep(sleep_time)
-            if ((dist < DISTANCE_FOR_SENSOR_ACTIVATION) and (prev_dist < DISTANCE_FOR_SENSOR_ACTIVATION)):
+            # if ((dist < DISTANCE_FOR_SENSOR_ACTIVATION) and (prev_dist < DISTANCE_FOR_SENSOR_ACTIVATION)):
+            #     GPIO.cleanup()
+            #     return
+            # prev_dist = dist
+            if (dist < DISTANCE_FOR_SENSOR_ACTIVATION):
                 GPIO.cleanup()
                 return
-            prev_dist = dist
 
     except KeyboardInterrupt:
         print("Measurement stopped by User")
