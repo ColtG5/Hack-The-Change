@@ -29,11 +29,11 @@ def main():
 
     window = tk.Tk()
 
-    # Continous loop to wait for motion to be detected
-    print("checking for motion")
-    checkForMotion()
-    # Once we have motion, go into initial procedure to wake up the screen
-    onWake()
+    # # Continous loop to wait for motion to be detected
+    # print("checking for motion")
+    # checkForMotion()
+    # # Once we have motion, go into initial procedure to wake up the screen
+    # onWake()
 
     #Create the UI to display for the user
 
