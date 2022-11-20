@@ -7,6 +7,7 @@ first_text = "Hello There!"
 light_blue = "#00DEFF"
 
 def displayAndSwitchWindows(window):
+    print("testing commit")
 
     window.geometry("1920x1080")
     window.resizable(0,0)
