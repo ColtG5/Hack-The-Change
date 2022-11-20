@@ -71,7 +71,7 @@ def sensor():
     try:
         while True:
             dist = distance()
-            print(dist)
+            # print(dist)
             sleep_time = 0.1
             time.sleep(sleep_time)
             if ((dist < 100) and (prev_dist < 100)):

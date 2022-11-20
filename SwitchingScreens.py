@@ -8,13 +8,15 @@ light_blue = "#00DEFF"
 
 def displayAndSwitchWindows(window):
 
-    
     window.geometry("1920x1080")
     window.resizable(0,0)
     window.attributes("-fullscreen", True)
+    print(window)
+    window.bind("<KeyPress>", lambda event, w=window: keyPressed(event, w))
     
     main_frame = tk.Frame(window, height=1080, width=1920, bg="black")
     main_frame.pack(fill="both", expand="true")
+    window.update()
     # main_frame.pack(side=tk.TOP)
     # main_frame.place(anchor='center', relx=0.5, rely=0.5)
 
@@ -58,6 +60,14 @@ def displayAndSwitchWindows(window):
         window.update()
 
         # window.quit()
+
+def keyPressed(event, window):
+    print(event)
+    print(window)
+    window.update()
+    window.destroy()
+    window.update()
+
 
 
 # def displayWindowTwo():
